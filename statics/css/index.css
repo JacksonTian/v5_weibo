@@ -1,0 +1,98 @@
+#index header {
+    height: 44px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #777f90;
+    background-image: -webkit-gradient(linear, left top, left bottom,
+        color-stop(0, #f4f5f7),
+        color-stop(0.5, #d8dbe2),
+        color-stop(0.5, #cdd2dc),
+        color-stop(1, #bec5d5));
+    padding: 0 5px;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+#index header a {
+    text-decoration: none;
+}
+#index header a.action{
+    width: 34px;
+    height: 30px;
+    display: -webkit-box;
+}
+#index header a.write {
+    background-image: url(../images/write.png);
+}
+#index header a.refresh {
+    background-image: url(../images/refresh.png);
+}
+#index header h2 {
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+#index header h2 a {
+    color: #333333;
+}
+#index article {
+    position: absolute;
+    background-color: #f4f4f4;
+    top: 44px;
+    width: 100%;
+    bottom: 49px;
+}
+#index footer {
+    height: 49px;
+    border-top: 1px solid #1c1c1c;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom,
+        color-stop(0, #575757),
+        color-stop(0.5, #141414),
+        color-stop(0.5, #000),
+        color-stop(1, #000));   
+}
+#index footer ul {
+    display: -webkit-box;
+}
+#index footer li {
+    -webkit-box-flex: 1;
+    width: 60px;
+}
+#index footer a {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    text-decoration: none;
+    height: 100%;
+    color: #999;
+    font-size: 12px;
+}
+#index footer .icon {
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-position: center center;
+}
+#index footer .home .icon {
+    background-image: url(../images/home.png);
+}
+#index footer .message .icon {
+    background-image: url(../images/message.png);
+}
+#index footer .profile .icon {
+    background-image: url(../images/profile.png);
+} 
+#index footer .square .icon {
+    background-image: url(../images/square.png);
+} 
+#index footer .more .icon {
+    background-image: url(../images/more.png);
+} 
