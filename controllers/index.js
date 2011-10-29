@@ -1,20 +1,47 @@
-var latlng = require("../libraries/latlng.js");
-var watchDeflection = 0.05;
-var matchDeflection = 0.002;
+var http = require("http");
 var controller = exports.controller = {};
 controller.get = {
     index: function () {
-        var self = this;
-        var cookie = self.request.cookie;
-        var userIdKey = "userId";
-        var userId = cookie.getCookie(userIdKey);
-        if (!userId) {
-            var now = new Date().getTime();
-            var YEAR = 365 * 24 * 60 * 60 * 1000;
-            cookie.setCookie(userIdKey, Math.random().toString(32).substring(2), {expires: new Date(now + YEAR).toGMTString()});
-        }
-        console.log(userId);
-        this.render("index");
+        var res = this.response;
+
+        var options = {
+                host: 'api.t.sina.com.cn',
+                path: '/statuses/public_timeline.json?source=117815021'
+            };
+        //http://api.t.sina.com.cn/statuses/public_timeline.json?source=117815021
+        var request = http.request(options, function(response) {
+            var data = '';
+
+            response.on('data',function (chunk) {
+                data += chunk;
+            }).on('end', function () {
+                res.writeHead(200, {'Content-Type':'application/json'});
+                res.write(data);
+                res.end();
+            });
+        });
+        request.end();
+    },
+    public_timeline: function () {
+        var res = this.response;
+
+        var options = {
+                host: 'api.t.sina.com.cn',
+                path: '/statuses/public_timeline.json?source=117815021'
+            };
+        //http://api.t.sina.com.cn/statuses/public_timeline.json?source=117815021
+        var request = http.request(options, function(response) {
+            var data = '';
+
+            response.on('data',function (chunk) {
+                data += chunk;
+            }).on('end', function () {
+                res.writeHead(200, {'Content-Type':'application/json'});
+                res.write(data);
+                res.end();
+            });
+        });
+        request.end();
     }
 };
 controller.post = {

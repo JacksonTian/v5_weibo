@@ -1,4 +1,4 @@
-var PORT = 8000;
+var PORT = 8080;
 var http = require('http'),
     mvc = require('./core/mvc'),
     db = require('./dbconfig').db,
